@@ -1,29 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 740" width="100%" height="100%">
   <style>
     * { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
     .bg { fill: #fcfcfc; }
     .panel { fill: #ffffff; stroke: #e0e0e0; stroke-width: 1.5; rx: 12; }
     .panel-unix { fill: #f8f9fa; stroke: #cfd8dc; stroke-width: 2; rx: 16; }
     .panel-win { fill: #f0f4f8; stroke: #b0bec5; stroke-width: 2; rx: 16; }
-
     .box-bsd { fill: #fff0f4; stroke: #f48fb1; stroke-width: 1.5; rx: 8; }
     .box-gnu { fill: #f1f8e9; stroke: #aed581; stroke-width: 1.5; rx: 8; }
     .box-linux { fill: #e3f2fd; stroke: #64b5f6; stroke-width: 1.5; rx: 8; }
     .box-gnulinux { fill: #e8f5e9; stroke: #81c784; stroke-width: 2; stroke-dasharray: 6,4; rx: 12; }
-
     .box-wsl { fill: #ffffff; stroke: #90a4ae; stroke-width: 2; stroke-dasharray: 6,4; rx: 12; }
     .box-wsl1 { fill: #fafafa; stroke: #cfd8dc; stroke-width: 1.5; rx: 8; }
     .box-wsl2 { fill: #e8f5e9; stroke: #81c784; stroke-width: 1.5; rx: 8; }
-
     .box-inner { fill: #ffffff; stroke: #e0e0e0; stroke-width: 1; rx: 6; }
-
     .title-main { font-size: 24px; font-weight: 600; fill: #263238; }
     .title-sub { font-size: 14px; fill: #546e7a; }
     .header { font-size: 18px; font-weight: 600; fill: #37474f; }
     .node-title { font-size: 16px; font-weight: 600; fill: #212121; }
     .node-desc { font-size: 12px; fill: #616161; }
     .node-note { font-size: 11px; fill: #757575; }
-
     .line { stroke: #90a4ae; stroke-width: 2; fill: none; }
     .arrow-head { fill: #90a4ae; }
   </style>
@@ -33,95 +28,93 @@
     </marker>
   </defs>
 
-  <rect width="1100" height="680" class="bg" />
+  <rect width="1150" height="740" class="bg" />
 
-  <text x="550" y="45" text-anchor="middle" class="title-main">オペレーティングシステム (OS) の構成と派生関係</text>
-  <text x="550" y="70" text-anchor="middle" class="title-sub">※システム全体 ＝ カーネル ＋ ユーザーランド (Kernel + Userland)</text>
+  <text x="575" y="45" text-anchor="middle" class="title-main">オペレーティングシステム (OS) の構成と派生関係</text>
+  <text x="575" y="70" text-anchor="middle" class="title-sub">※システム全体 ＝ カーネル ＋ ユーザーランド (Kernel + Userland)</text>
 
-  <rect x="30" y="100" width="700" height="550" class="panel-unix" />
-  <text x="380" y="135" text-anchor="middle" class="header">UNIX系システム (UNIX系統・POSIX準拠)</text>
+  <rect x="20" y="100" width="740" height="610" class="panel-unix" />
+  <text x="390" y="135" text-anchor="middle" class="header">UNIX系システム (UNIX系統・POSIX準拠)</text>
 
-  <rect x="50" y="160" width="240" height="460" class="box-bsd" />
-  <text x="170" y="195" text-anchor="middle" class="node-title">BSD系システム</text>
-  <text x="170" y="215" text-anchor="middle" class="node-desc">カリフォルニア大学バークレー校発祥</text>
+  <rect x="40" y="160" width="230" height="520" class="box-bsd" />
+  <text x="155" y="195" text-anchor="middle" class="node-title">BSD系システム</text>
+  <text x="155" y="215" text-anchor="middle" class="node-desc">カリフォルニア大学バークレー校発祥</text>
 
-  <rect x="70" y="240" width="200" height="80" class="box-inner" />
-  <text x="170" y="265" text-anchor="middle" class="node-title">BSD ユーザーランド</text>
-  <text x="170" y="285" text-anchor="middle" class="node-desc">Shell, Coreutils 等</text>
-  <text x="170" y="305" text-anchor="middle" class="node-note">(POSIX準拠)</text>
+  <rect x="55" y="240" width="200" height="85" class="box-inner" />
+  <text x="155" y="265" text-anchor="middle" class="node-title">BSD ユーザーランド</text>
+  <text x="155" y="285" text-anchor="middle" class="node-desc">Shell, Coreutils 等</text>
+  <text x="155" y="305" text-anchor="middle" class="node-note">(POSIX準拠)</text>
 
-  <rect x="70" y="350" width="200" height="240" class="box-inner" stroke="#b0bec5" stroke-width="2"/>
-  <text x="170" y="380" text-anchor="middle" class="node-title">macOS</text>
-  <text x="170" y="405" text-anchor="middle" class="node-desc">【カーネル】</text>
-  <text x="170" y="425" text-anchor="middle" class="node-desc">XNU カーネル</text>
-  <text x="170" y="440" text-anchor="middle" class="node-note">(Mach + BSD層 + I/O Kit)</text>
-  <text x="170" y="470" text-anchor="middle" class="node-desc">【ユーザーランド】</text>
-  <text x="170" y="490" text-anchor="middle" class="node-desc">Apple独自 ＋ BSD系ツール</text>
-  <text x="170" y="525" text-anchor="middle" class="node-note">※独立した完全なOS構造を持つ</text>
-  <text x="170" y="540" text-anchor="middle" class="node-note">（BSDユーザーランドには包含されない）</text>
+  <rect x="55" y="350" width="200" height="255" class="box-inner" stroke="#b0bec5" stroke-width="2"/>
+  <text x="155" y="380" text-anchor="middle" class="node-title">macOS</text>
+  <text x="155" y="410" text-anchor="middle" class="node-desc">【カーネル】</text>
+  <text x="155" y="430" text-anchor="middle" class="node-desc">XNU カーネル</text>
+  <text x="155" y="450" text-anchor="middle" class="node-note">(Mach + BSD層 + I/O Kit)</text>
+  <text x="155" y="485" text-anchor="middle" class="node-desc">【ユーザーランド】</text>
+  <text x="155" y="505" text-anchor="middle" class="node-desc">Apple独自 ＋ BSD系ツール</text>
+  <text x="155" y="540" text-anchor="middle" class="node-note">※独立した完全なOS構造を持つ</text>
+  <text x="155" y="560" text-anchor="middle" class="node-note">（BSDユーザーランドには包含されない）</text>
 
+  <rect x="285" y="160" width="225" height="200" class="box-gnu" />
+  <text x="397.5" y="195" text-anchor="middle" class="node-title">GNU プロジェクト</text>
+  <text x="397.5" y="215" text-anchor="middle" class="node-note">1983年〜 自由なOS開発</text>
 
-  <rect x="310" y="160" width="200" height="180" class="box-gnu" />
-  <text x="410" y="195" text-anchor="middle" class="node-title">GNU プロジェクト</text>
-  <text x="410" y="215" text-anchor="middle" class="node-note">1983年〜 自由なOS開発</text>
+  <rect x="295" y="240" width="205" height="100" class="box-inner" />
+  <text x="397.5" y="265" text-anchor="middle" class="node-title">GNU ユーザーランド</text>
+  <text x="397.5" y="285" text-anchor="middle" class="node-desc">bash, coreutils, gcc 等</text>
+  <text x="397.5" y="305" text-anchor="middle" class="node-note">(POSIX準拠ツール群・</text>
+  <text x="397.5" y="322" text-anchor="middle" class="node-note">Hurd開発は未成熟)</text>
 
-  <rect x="325" y="240" width="170" height="80" class="box-inner" />
-  <text x="410" y="265" text-anchor="middle" class="node-title">GNU ユーザーランド</text>
-  <text x="410" y="285" text-anchor="middle" class="node-desc">bash, coreutils, gcc 等</text>
-  <text x="410" y="305" text-anchor="middle" class="node-note">(POSIX準拠ツール群・Hurd開発は未成熟)</text>
+  <rect x="525" y="160" width="215" height="200" class="box-linux" />
+  <text x="632.5" y="195" text-anchor="middle" class="node-title">Linux (独自開発)</text>
+  <text x="632.5" y="215" text-anchor="middle" class="node-note">1991年〜 Linus Torvalds</text>
 
-  <rect x="525" y="160" width="185" height="180" class="box-linux" />
-  <text x="617" y="195" text-anchor="middle" class="node-title">Linux (独自開発)</text>
-  <text x="617" y="215" text-anchor="middle" class="node-note">1991年〜 Linus Torvalds</text>
+  <rect x="535" y="240" width="195" height="100" class="box-inner" />
+  <text x="632.5" y="265" text-anchor="middle" class="node-title">Linux カーネル</text>
+  <text x="632.5" y="285" text-anchor="middle" class="node-desc">ハードウェア制御・OS中核</text>
+  <text x="632.5" y="312" text-anchor="middle" class="node-note">(GNUとは完全に独立)</text>
 
-  <rect x="540" y="240" width="155" height="80" class="box-inner" />
-  <text x="617" y="265" text-anchor="middle" class="node-title">Linux カーネル</text>
-  <text x="617" y="285" text-anchor="middle" class="node-desc">ハードウェア制御・OS中核</text>
-  <text x="617" y="305" text-anchor="middle" class="node-note">(GNUとは完全に独立)</text>
+  <rect x="285" y="440" width="455" height="180" class="box-gnulinux" />
+  <text x="512.5" y="475" text-anchor="middle" class="node-title">GNU/Linux OS (通称: Linux)</text>
+  <text x="512.5" y="495" text-anchor="middle" class="node-desc">独立して開発された2つの要素を組み合わせて完全な実用OSに</text>
 
-  <rect x="310" y="420" width="400" height="170" class="box-gnulinux" />
-  <text x="510" y="455" text-anchor="middle" class="node-title">GNU/Linux OS (通称: Linux)</text>
-  <text x="510" y="475" text-anchor="middle" class="node-desc">独立して開発された2つの要素を組み合わせて完全な実用OSに</text>
+  <text x="397.5" y="535" text-anchor="middle" class="node-desc">【ユーザーランド】</text>
+  <text x="397.5" y="555" text-anchor="middle" class="node-title">GNU ツール群</text>
+  <text x="397.5" y="575" text-anchor="middle" class="node-note">シェル、基本コマンド等</text>
 
-  <text x="410" y="515" text-anchor="middle" class="node-desc">【ユーザーランド】</text>
-  <text x="410" y="535" text-anchor="middle" class="node-title">GNU ツール群</text>
-  <text x="410" y="555" text-anchor="middle" class="node-note">シェル、基本コマンド等</text>
+  <text x="512.5" y="545" text-anchor="middle" class="node-title">＋</text>
 
-  <text x="510" y="525" text-anchor="middle" class="node-title">＋</text>
+  <text x="632.5" y="535" text-anchor="middle" class="node-desc">【カーネル】</text>
+  <text x="632.5" y="555" text-anchor="middle" class="node-title">Linux カーネル</text>
+  <text x="632.5" y="575" text-anchor="middle" class="node-note">GPLライセンスで結合</text>
 
-  <text x="610" y="515" text-anchor="middle" class="node-desc">【カーネル】</text>
-  <text x="610" y="535" text-anchor="middle" class="node-title">Linux カーネル</text>
-  <text x="610" y="555" text-anchor="middle" class="node-note">GPLライセンスで結合</text>
+  <path d="M 397.5 340 L 397.5 425" class="line" marker-end="url(#arrow)" />
+  <path d="M 632.5 340 L 632.5 425" class="line" marker-end="url(#arrow)" />
 
-  <path d="M 410 320 L 410 405" class="line" marker-end="url(#arrow)" />
-  <path d="M 617 320 L 617 405" class="line" marker-end="url(#arrow)" />
+  <rect x="780" y="100" width="350" height="610" class="panel-win" />
+  <text x="955" y="135" text-anchor="middle" class="header">Windows NT系システム</text>
 
+  <rect x="800" y="160" width="310" height="130" class="box-inner" stroke="#b0bec5" stroke-width="2" />
+  <text x="955" y="195" text-anchor="middle" class="node-title">Windows OS</text>
+  <text x="955" y="225" text-anchor="middle" class="node-desc">NT カーネル</text>
+  <text x="955" y="245" text-anchor="middle" class="node-title">＋</text>
+  <text x="955" y="265" text-anchor="middle" class="node-desc">Windows ユーザーランド</text>
 
-  <rect x="750" y="100" width="320" height="550" class="panel-win" />
-  <text x="910" y="135" text-anchor="middle" class="header">Windows NT系システム</text>
+  <rect x="800" y="320" width="310" height="360" class="box-wsl" />
+  <text x="955" y="350" text-anchor="middle" class="node-title">WSL</text>
+  <text x="955" y="370" text-anchor="middle" class="node-note">(Windows Subsystem for Linux)</text>
 
-  <rect x="770" y="160" width="280" height="120" class="box-inner" stroke="#b0bec5" stroke-width="2" />
-  <text x="910" y="195" text-anchor="middle" class="node-title">Windows OS</text>
-  <text x="910" y="225" text-anchor="middle" class="node-desc">NT カーネル</text>
-  <text x="910" y="245" text-anchor="middle" class="node-title">＋</text>
-  <text x="910" y="265" text-anchor="middle" class="node-desc">Windows ユーザーランド</text>
+  <rect x="820" y="390" width="270" height="85" class="box-wsl1" />
+  <text x="955" y="420" text-anchor="middle" class="node-title">WSL 1</text>
+  <text x="955" y="440" text-anchor="middle" class="node-desc">システムコール変換層 (Linuxカーネル無)</text>
 
+  <rect x="820" y="495" width="270" height="155" class="box-wsl2" />
+  <text x="955" y="525" text-anchor="middle" class="node-title">WSL 2</text>
+  <text x="955" y="545" text-anchor="middle" class="node-desc">軽量ユーティリティVM内で実行</text>
+  <text x="955" y="575" text-anchor="middle" class="node-desc">【実際のLinuxカーネル】</text>
+  <text x="955" y="595" text-anchor="middle" class="node-title">＋</text>
+  <text x="955" y="615" text-anchor="middle" class="node-desc">【GNU等ユーザーランド】</text>
 
-  <rect x="770" y="310" width="280" height="310" class="box-wsl" />
-  <text x="910" y="340" text-anchor="middle" class="node-title">WSL</text>
-  <text x="910" y="360" text-anchor="middle" class="node-note">(Windows Subsystem for Linux)</text>
-
-  <rect x="790" y="380" width="240" height="70" class="box-wsl1" />
-  <text x="910" y="405" text-anchor="middle" class="node-title">WSL 1</text>
-  <text x="910" y="425" text-anchor="middle" class="node-desc">システムコール変換層 (Linuxカーネル無)</text>
-
-  <rect x="790" y="470" width="240" height="130" class="box-wsl2" />
-  <text x="910" y="495" text-anchor="middle" class="node-title">WSL 2</text>
-  <text x="910" y="515" text-anchor="middle" class="node-desc">軽量ユーティリティVM内で実行</text>
-  <text x="910" y="540" text-anchor="middle" class="node-desc">【実際のLinuxカーネル】</text>
-  <text x="910" y="555" text-anchor="middle" class="node-title">＋</text>
-  <text x="910" y="575" text-anchor="middle" class="node-desc">【GNU等ユーザーランド】</text>
-
-  <path d="M 710 500 L 775 500" class="line" marker-end="url(#arrow)" stroke-dasharray="4,4" />
-  <text x="742" y="490" text-anchor="middle" class="node-note">環境を内包</text>
+  <path d="M 740 540 L 805 540" class="line" marker-end="url(#arrow)" stroke-dasharray="4,4" />
+  <text x="772.5" y="530" text-anchor="middle" class="node-note">環境を内包</text>
 </svg>
