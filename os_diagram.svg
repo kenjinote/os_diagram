@@ -39,7 +39,7 @@
   <text x="550" y="70" text-anchor="middle" class="title-sub">※システム全体 ＝ カーネル ＋ ユーザーランド (Kernel + Userland)</text>
 
   <rect x="30" y="100" width="700" height="550" class="panel-unix" />
-  <text x="380" y="135" text-anchor="middle" class="header">UNIX系システム (POSIX準拠・派生)</text>
+  <text x="380" y="135" text-anchor="middle" class="header">UNIX系システム (UNIX系統・POSIX準拠)</text>
 
   <rect x="50" y="160" width="240" height="460" class="box-bsd" />
   <text x="170" y="195" text-anchor="middle" class="node-title">BSD由来システム</text>
@@ -48,13 +48,13 @@
   <rect x="70" y="240" width="200" height="80" class="box-inner" />
   <text x="170" y="265" text-anchor="middle" class="node-title">BSD ユーザーランド</text>
   <text x="170" y="285" text-anchor="middle" class="node-desc">Shell, Coreutils 等</text>
-  <text x="170" y="305" text-anchor="middle" class="node-note">(POSIX派生)</text>
+  <text x="170" y="305" text-anchor="middle" class="node-note">(POSIX準拠)</text>
 
   <rect x="70" y="350" width="200" height="240" class="box-inner" stroke="#b0bec5" stroke-width="2"/>
   <text x="170" y="380" text-anchor="middle" class="node-title">macOS</text>
   <text x="170" y="405" text-anchor="middle" class="node-desc">【カーネル】</text>
   <text x="170" y="425" text-anchor="middle" class="node-desc">XNU カーネル</text>
-  <text x="170" y="440" text-anchor="middle" class="node-note">(Mach + FreeBSDコード流用)</text>
+  <text x="170" y="440" text-anchor="middle" class="node-note">(Mach + BSDサブシステム)</text>
   <text x="170" y="470" text-anchor="middle" class="node-desc">【ユーザーランド】</text>
   <text x="170" y="490" text-anchor="middle" class="node-desc">Apple独自 ＋ BSD系ツール</text>
   <text x="170" y="525" text-anchor="middle" class="node-note">※独立した完全なOS構造を持つ</text>
@@ -68,7 +68,7 @@
   <rect x="325" y="240" width="170" height="80" class="box-inner" />
   <text x="410" y="265" text-anchor="middle" class="node-title">GNU ユーザーランド</text>
   <text x="410" y="285" text-anchor="middle" class="node-desc">bash, coreutils, gcc 等</text>
-  <text x="410" y="305" text-anchor="middle" class="node-note">(POSIX互換・カーネル開発は遅延)</text>
+  <text x="410" y="305" text-anchor="middle" class="node-note">(POSIX準拠ツール群・Hurd開発は未成熟)</text>
 
   <rect x="525" y="160" width="185" height="180" class="box-linux" />
   <text x="617" y="195" text-anchor="middle" class="node-title">Linux (独自開発)</text>
